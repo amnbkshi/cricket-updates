@@ -5,10 +5,10 @@ import os
 from twilio.rest import TwilioRestClient
 
 # Reading account details from environment variable":
-accSID = os.env.get('tw_SID')
-token = os.env.get('tw_token')
-receiverNumber = os.env.get('tw_receiver')
-senderNumber = os.env.get('tw_sender')
+accSID = os.environ.get('tw_SID')
+token = os.environ.get('tw_token')
+receiverNumber = os.environ.get('tw_receiver')
+senderNumber = os.environ.get('tw_sender')
 
 def textme(message):
 	twCli = TwilioRestClient(accSID, token)
